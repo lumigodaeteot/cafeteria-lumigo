@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <title>Cafeteria Lumigo</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>LOGO</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav> <!-- NAVEGAÇÃO -->
+        </header> <!-- CABEÇALHO -->
+
+        <main>
+            <img class="dec-1 animate__animated animate__fadeInTopLeft wow" src="img/tela-1_back-1.png">
+            <img class="copo" src="img/img_copo.png">
+            <img class="dec-2" src="img/tela-1_back-2.png"> 
+
+            <h1 class="titulo">Sua Bebida em<br>Um Clique <img class="dec" src="img/img_mouse.png"></h1>
+        </main> <!-- PRIMEIRA TELA-->
+
+        <section>
+
+            <div class="scroll-area tela-2">
+                <img class="dec" src="img/tela-2_back.png">
+                <img class="cafe" src="img/img_cafe.png">
+            </div> <!-- SEGUNDA TELA -->
+
+            <div class="scroll-area tela-3">
+                <img class="dec" src="img/tela-3_back.png">
+            </div> <!-- TERCEIRA TELA -->
+
+            <div class="scroll-area tela-4">
+                <img class="dec-1" src="img/tela-4_back-1.png">
+                <img class="dec-2" src="img/tela-4_back-2.png">
+            </div> <!-- QUARTA TELA -->
+
+        </section> <!-- SECTION -->
+
+        <footer>
+
+        </footer> <!-- RODAPÉ -->
+    </div>
+
+    <!-- JAVASCRIPT ANIMATE ON SCROLL -->
+    <script src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW({animateClass: 'animated', offset: 100});
+        wow.init();
+    </script>
+</body>
+</html>

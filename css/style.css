@@ -1,0 +1,271 @@
+/* FONTES PERSONALIZADAS */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Roboto&display=swap');
+/*  font-family: 'Bebas Neue', cursive; CONTEUDO
+    font-family: 'Pacifico', cursive; TITULOS
+    font-family: 'Roboto', sans-serif; DIVERSOS
+*/
+
+/* ============== RESET ============== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-pink: #FFE3F0;
+    --pink: #FF7EBB;
+
+    --background-blue: #A4E5EB;
+    --blue: #83CCD3;
+
+    --background-salmon: #FFCBB0;
+    --salmon: #EC8C8D;
+
+    --background-brown: #845E3F;
+    --brown: #DDA06F;
+}
+
+body {overflow-x: hidden; font-family: 'Roboto', sans-serif; scroll-behavior: smooth;}
+
+/* =================================== */
+
+/* ============ CONTAINER ============ */
+.container {
+    display: grid;
+    grid-template-areas: "header"
+                         "main"
+                         "section"
+                         "footer" ;
+}
+/* =================================== */
+
+/* ============= HEADER ============== */
+header {
+    grid-area: header;
+
+    background: transparent;
+    width: 100%;
+    height: 20vh;
+    padding: 20px 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+    z-index: 1000;
+}
+
+header h2 {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: var(--pink);
+}
+/* =================================== */
+
+/* =============== MAIN ============== */
+main {
+    grid-area: main;
+    
+    background: var(--background-pink);
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    position: relative;
+    z-index: 0;
+}
+
+main .dec-1 {
+    height: 45vh;
+
+    top: 0;
+    left: 0;
+
+    position: absolute;
+    z-index: 10;
+}
+
+main .dec-2 {
+    height: 55vh;
+    
+    bottom: 0;
+    right: 0;
+
+    position: absolute;
+    z-index: 10;
+}
+
+main .copo {
+    height: 80vh;
+    transform: rotate(20deg);
+
+    top: 15%;
+    right: 5%;
+
+    position: absolute;
+    z-index: 100;
+}
+
+main .copo:hover {
+    transition: all .5s;
+    transform: scale(1.2);
+}
+
+.titulo {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    letter-spacing: 4px;
+    color: #6B4216;
+    margin-left: 200px;
+    
+    position: relative;
+}
+
+.titulo .dec {
+    width: 50%;
+
+    position: absolute;
+    left: 46.5%;
+    bottom: -20%;
+}
+
+.titulo .dec:hover {
+    transition: .3s;
+    transform: scale(0.8);
+}
+/* =================================== */
+
+/* ============= SECTION ============= */
+section {
+    grid-area: section;
+
+    width: 100%;
+}
+
+.scroll-area {
+    scroll-snap-align: start;
+}
+/* =================================== */
+
+/* =========== SEGUNDA TELA ========== */
+.tela-2 {
+    background: var(--background-blue);
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    z-index: 1;
+}
+
+.tela-2 .dec {
+    height: 55vh;
+    
+    top: 0;
+    right: 0;
+
+    position: absolute;
+    z-index: 10;
+}
+
+.tela-2 .cafe {
+    height: 90vh;
+    
+    bottom: 0;
+    left: 0;
+
+    position: absolute;
+    z-index: 10;
+}
+/* =================================== */
+
+/* ========== TERCEIRA TELA ========== */
+.tela-3 {
+    background: var(--background-salmon);
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    z-index: 1;
+}
+
+.tela-3 .dec {
+    height: 75vh;
+
+    bottom: 0;
+    left: 0;
+
+    position: absolute;
+    z-index: 10;
+}
+/* =================================== */
+
+/* =========== QUARTA TELA =========== */
+.tela-4 {
+    background: var(--background-brown);
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    z-index: 1;
+}
+
+.tela-4 .dec-1 {
+    height: 40vh;
+
+    top: 0;
+    left: 0;
+
+    position: absolute;
+    z-index: 10;
+}
+
+.tela-4 .dec-2 {
+    height: 50vh;
+
+    bottom: 0;
+    right: 0;
+
+    position: absolute;
+    z-index: 10;
+}
+/* =================================== */
+
+footer {
+    grid-area: footer;
+
+    background: white;
+    min-height: 30vh;
+}
+
+/* =========== SCROLL BAR ============ */
+::-webkit-scrollbar {background: transparent; width: 7px;}
+::-webkit-scrollbar-thumb {background-color: var(--pink);}
+/* =================================== */
