@@ -204,6 +204,31 @@ section {
     position: absolute;
     z-index: 10;
 }
+.tela-2 .titulo {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    letter-spacing: 4px;
+    color: #6B4216;
+    margin-left: 650px;
+    padding-top: 50px;
+    
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+}
+.tela-2 .composicao {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5em;
+    color: #E4A06E;
+    margin-left: 650px;
+    padding-top: 50px;
+    letter-spacing: 2px;
+
+    
+    position: relative;
+    display: inline-block;
+    
+}
 /* =================================== */
 
 /* ========== TERCEIRA TELA ========== */
@@ -225,6 +250,42 @@ section {
     position: absolute;
     z-index: 10;
 }
+
+.tela-3 .titulo {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    letter-spacing: 4px;
+    color: #92644D;
+    margin-left: 200px;
+    padding-top: 50px;
+
+    position: relative;
+    z-index: 100;
+}
+
+.tela-3 .composicao {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5em;
+    color: #FFCBB0;
+    margin-left: 150px;
+    padding-top: 50px;
+    letter-spacing: 2px;
+
+    position: relative;
+
+    z-index: 100;
+}
+.tela-3 .copo {
+    height: 80vh;
+
+    top: 15%;
+    right: 5%;
+
+    position: absolute;
+    z-index: 100;
+}
+
+
 /* =================================== */
 
 /* =========== QUARTA TELA =========== */
@@ -256,7 +317,59 @@ section {
     position: absolute;
     z-index: 10;
 }
-/* =================================== */
+
+.tela-4 .celular {
+    height: 100vh;
+    top: 2%;
+    left: 5%;
+
+    position: absolute;
+    z-index: 100;
+}
+
+.tela-4 .titulo {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    color: #DDA06E;
+    margin-left: 650px;
+    padding-top: 50px;
+    
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+}
+.tela-4 .composicao {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5em;
+    color: #FFCBB0;
+    margin-left: 650px;
+    padding-top: 50px;
+    
+    position: relative;
+    display: inline-block;
+    letter-spacing: 2px;
+
+}
+
+.tela-4 .apple {
+    height: 10vh;
+
+    top: 520px;
+    left: 650px;
+
+    position: absolute;
+    z-index: 10;
+}
+.tela-4 .play {
+    height: 10vh;
+
+    top: 520px;
+    left: 730px;
+
+    position: absolute;
+    z-index: 10;
+}
+/* ============= footer ====================== */
 
 footer {
     grid-area: footer;
@@ -265,7 +378,37 @@ footer {
     min-height: 30vh;
 }
 
+.flex {
+    display: flex;
+    margin-left: 15em;
+    margin-top: 3em;
+}
+.alinha1 {
+    margin-left: 5em;
+}
+
+.tit {
+    font-size: 2em;
+    font-family: 'Bebas Neue', cursive;
+
+}
+.icon{
+    padding-top: 0.3em;
+}
+.logofooter{
+    margin-top: -1em;
+}
+
+
 /* =========== SCROLL BAR ============ */
 ::-webkit-scrollbar {background: transparent; width: 7px;}
 ::-webkit-scrollbar-thumb {background-color: var(--pink);}
 /* =================================== */
+
+/* =========== Títulos gerais ============ */
+
+
+
+
+
+
