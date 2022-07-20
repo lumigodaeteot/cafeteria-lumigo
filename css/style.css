@@ -10,6 +10,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -26,7 +27,7 @@
     --brown: #DDA06F;
 }
 
-body {overflow-x: hidden; font-family: 'Roboto', sans-serif; scroll-behavior: smooth;}
+body {overflow-x: hidden; font-family: 'Roboto', sans-serif;}
 
 /* =================================== */
 
@@ -139,7 +140,7 @@ main .copo:hover {
     transform: scale(1.2);
 }
 
-.titulo {
+main .titulo {
     font-family: 'Pacifico', cursive;
     font-size: 4em;
     letter-spacing: 4px;
@@ -149,7 +150,7 @@ main .copo:hover {
     position: relative;
 }
 
-.titulo .dec {
+main .titulo .dec {
     width: 50%;
 
     position: absolute;
@@ -157,7 +158,7 @@ main .copo:hover {
     bottom: -20%;
 }
 
-.titulo .dec:hover {
+main .titulo .dec:hover {
     transition: .3s;
     transform: scale(0.8);
 }
@@ -169,10 +170,6 @@ section {
 
     width: 100%;
 }
-
-.scroll-area {
-    scroll-snap-align: start;
-}
 /* =================================== */
 
 /* =========== SEGUNDA TELA ========== */
@@ -180,6 +177,12 @@ section {
     background: var(--background-blue);
     width: 100%;
     height: 100vh;
+    padding: 0 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
 
     position: relative;
     z-index: 1;
@@ -204,30 +207,21 @@ section {
     position: absolute;
     z-index: 10;
 }
+
 .tela-2 .titulo {
     font-family: 'Pacifico', cursive;
     font-size: 4em;
     letter-spacing: 4px;
     color: #6B4216;
-    margin-left: 650px;
-    padding-top: 50px;
-    
-    position: relative;
-    display: inline-block;
-    z-index: 100;
+    line-height: 80px;
 }
+
 .tela-2 .composicao {
+    margin-top: 50px;
     font-family: 'Bebas Neue', cursive;
     font-size: 2.5em;
     color: #E4A06E;
-    margin-left: 650px;
-    padding-top: 50px;
     letter-spacing: 2px;
-
-    
-    position: relative;
-    display: inline-block;
-    
 }
 /* =================================== */
 
@@ -275,6 +269,7 @@ section {
 
     z-index: 100;
 }
+
 .tela-3 .copo {
     height: 80vh;
 
@@ -293,6 +288,12 @@ section {
     background: var(--background-brown);
     width: 100%;
     height: 100vh;
+    padding: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
 
     position: relative;
     z-index: 1;
@@ -331,84 +332,104 @@ section {
     font-family: 'Pacifico', cursive;
     font-size: 4em;
     color: #DDA06E;
-    margin-left: 650px;
-    padding-top: 50px;
-    
-    position: relative;
-    display: inline-block;
+
     z-index: 100;
 }
+
 .tela-4 .composicao {
     font-family: 'Bebas Neue', cursive;
     font-size: 2.5em;
-    color: #FFCBB0;
-    margin-left: 650px;
-    padding-top: 50px;
+    color: #FFCBB0;  
+    margin: 30px 0;
     
-    position: relative;
-    display: inline-block;
     letter-spacing: 2px;
-
 }
 
-.tela-4 .apple {
-    height: 10vh;
-
-    top: 520px;
-    left: 650px;
-
-    position: absolute;
-    z-index: 10;
+.tela-4 .icon {
+    width: 48px;
+    margin-right: 15px;
 }
-.tela-4 .play {
-    height: 10vh;
 
-    top: 520px;
-    left: 730px;
-
-    position: absolute;
-    z-index: 10;
-}
-/* ============= footer ====================== */
+/* ============= FOOTER ============== */
 
 footer {
     grid-area: footer;
 
     background: white;
-    min-height: 30vh;
+    width: 100%;
+    height: auto;
 }
 
-.flex {
+footer .flex-content {
     display: flex;
-    margin-left: 15em;
-    margin-top: 3em;
-}
-.alinha1 {
-    margin-left: 5em;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    margin: 50px 100px;
 }
 
-.tit {
-    font-size: 2em;
-    font-family: 'Bebas Neue', cursive;
-
-}
-.icon{
-    padding-top: 0.3em;
-}
-.logofooter{
-    margin-top: -1em;
+footer .titulo {
+    color: var(--pink);
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
 }
 
+footer .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .icon {
+    margin-right: 5px;
+    width: 24px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a {
+    text-transform: uppercase;
+}
+
+footer a {
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 3px;
+    transition: .3s;
+}
+
+footer a:hover {
+    color: var(--pink);
+}
+
+footer .copyright {
+    background-color: var(--pink);
+
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+}
 
 /* =========== SCROLL BAR ============ */
 ::-webkit-scrollbar {background: transparent; width: 7px;}
 ::-webkit-scrollbar-thumb {background-color: var(--pink);}
 /* =================================== */
 
-/* =========== Títulos gerais ============ */
-
-
-
-
-
-
+/* ========= RESPONSIVIDADE ========== */
+/* mo preguis de fazer
