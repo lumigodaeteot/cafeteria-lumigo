@@ -58,10 +58,8 @@ header {
     z-index: 1000;
 }
 
-header h2 {
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
+header .logo {
+    width: 110px;
 }
 
 nav ul {
@@ -366,6 +364,10 @@ footer .flex-content {
     justify-content: space-around;
 
     margin: 50px 100px;
+}
+
+footer .logo {
+    width: 110px;
 }
 
 footer .titulo {
