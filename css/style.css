@@ -270,17 +270,48 @@ section {
     z-index: 100;
 }
 
-.tela-3 .copo {
+.tela-3 .cupom {
     height: 80vh;
 
-    top: 15%;
+    top: 1%;
     right: 5%;
 
     position: absolute;
     z-index: 100;
+
 }
 
+.tela-3 .button {
+    top: 85%;
+    right: 18%;
 
+    position: absolute;
+    z-index: 100;
+}
+.tela-3 .button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #e66264;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #92644D;
+  }
+  
+.tela-3 .button:hover {background-color: #e97b7d}
+  
+.tela-3  .button:active {
+    background-color: #e7696b;
+    box-shadow: 0 5px #92644D;
+    transform: translateY(4px);
+  }
 /* =================================== */
 
 /* =========== QUARTA TELA =========== */
@@ -503,6 +534,19 @@ button.active .menu::after {
     width: 70%;
 }
 
+.seta {
+    width: 10vh;
+    height: 10vh;
+    top: 80%;
+    left: 40%;
+    transition: .5s;
+    float: left;
+    box-shadow: -2px 2px 0 #e66264;
+    transform: rotate(315deg);
+    position: absolute;
+
+}
+
 .produto button {
     display: flex;
     align-items: center;
@@ -533,10 +577,10 @@ button.active .menu::after {
     display: none;
 }
 
-.produto #cont1 {
+/*.produto #cont1 {
     background: red;
     grid-area: a;
-}
+}*/
 
 .produto #cont2 {
     background: blue;
