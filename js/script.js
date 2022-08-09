@@ -124,3 +124,25 @@ function showHideDiv5() {
     }
 }
 /////////////////////////////////////////////////////////////////////
+
+
+// MOSTRAR E ESCONDER SENHA 
+
+function eyeClick() {
+    let inputSenha = document.getElementById("inputSenha");
+    let eye = document.getElementById("senhaonoff");
+    let senhaTypePassword = inputSenha.type == "password";
+
+    if (senhaTypePassword) {
+        inputSenha.setAttribute("type", "text");
+        eye.setAttribute("src", "img/dec-senhaoff.png");
+
+    } else {
+        inputSenha.setAttribute("type", "password");
+        eye.setAttribute("src", "img/dec-senhaon.png");
+
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////

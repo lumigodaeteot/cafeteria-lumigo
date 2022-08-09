@@ -18,19 +18,29 @@
 </head>
 <body>
     <div class="login-body">
+        <img class="dec" src="img/login_back-1.png">
+        <img class="dec" src="img/login_back-2.png">
+        <img class="dec" src="img/login_back-3.png">
+        <img class="dec" src="img/login_back-4.png">
+
         <div class="login-container">
             <div class="login-content">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <a href="home.html">Voltar</a>
+                <h1 class="tit">Login</h1>
+                <input type="text" name="inputNome">
+
+                <div class="div_senha">
+                    <input type="password" name="inputSenha" id="inputSenha">
+                    <img id="senhaonoff" src="img/dec-senhaoff.png" onclick="eyeClick()">
+                </div>
+
+                <input type="submit" value="Entrar" class="btn">
             </div>
             <div class="login-content">
                 <img width="80%" src="img/dec-login.png">
             </div>
         </div>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
