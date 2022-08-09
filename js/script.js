@@ -12,6 +12,8 @@ function showHideDiv1() {
 
     document.querySelector("#aba2").style.display = "none";
     document.querySelector("#aba3").style.display = "none";
+    document.querySelector("#aba4").style.display = "none";
+    document.querySelector("#aba5").style.display = "none";
 
     if(aba.style.display === "block") {
         aba.style.display = "none";
@@ -23,6 +25,8 @@ function showHideDiv1() {
         btn1.classList.add("active");
         btn2.classList.remove("active");
         btn3.classList.remove("active");
+        btn4.classList.remove("active");
+        btn5.classList.remove("active");
     }
 }
 
@@ -31,6 +35,8 @@ function showHideDiv2() {
 
     document.querySelector("#aba1").style.display = "none";
     document.querySelector("#aba3").style.display = "none";
+    document.querySelector("#aba4").style.display = "none";
+    document.querySelector("#aba5").style.display = "none";
 
     if(aba.style.display === "block") {
         aba.style.display = "none";
@@ -42,6 +48,8 @@ function showHideDiv2() {
         btn1.classList.remove("active");
         btn2.classList.add("active");
         btn3.classList.remove("active");
+        btn4.classList.remove("active");
+        btn5.classList.remove("active");
     }
 }
 
@@ -50,6 +58,8 @@ function showHideDiv3() {
 
     document.querySelector("#aba1").style.display = "none";
     document.querySelector("#aba2").style.display = "none";
+    document.querySelector("#aba4").style.display = "none";
+    document.querySelector("#aba5").style.display = "none";
 
     if(aba.style.display === "block") {
         aba.style.display = "none";
@@ -61,10 +71,12 @@ function showHideDiv3() {
         btn1.classList.remove("active");
         btn2.classList.remove("active");
         btn3.classList.add("active");
+        btn4.classList.remove("active");
+        btn5.classList.remove("active");
     }
 }
 
-function showHideDi4() {
+function showHideDiv4() {
     let aba = document.querySelector("#aba4");
 
     document.querySelector("#aba1").style.display = "none";
