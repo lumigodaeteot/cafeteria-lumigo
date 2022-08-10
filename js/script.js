@@ -130,15 +130,18 @@ function showHideDiv5() {
 
 function eyeClick() {
     let inputSenha = document.getElementById("inputSenha");
+    let inputConfirmSenha = document.getElementById("inputConfirmSenha");
     let eye = document.getElementById("senhaonoff");
     let senhaTypePassword = inputSenha.type == "password";
 
     if (senhaTypePassword) {
         inputSenha.setAttribute("type", "text");
+        inputConfirmSenha.setAttribute("type", "text");
         eye.setAttribute("src", "img/dec-senhaoff.png");
 
     } else {
         inputSenha.setAttribute("type", "password");
+        inputConfirmSenha.setAttribute("type", "password");
         eye.setAttribute("src", "img/dec-senhaon.png");
 
     }
@@ -146,3 +149,58 @@ function eyeClick() {
 
 
 /////////////////////////////////////////////////////////////////////
+
+// VALIDAÇÃO DO FORMULÁRIO
+function validacao(form) {
+    inputSenha = document.getElementById("inputSenha").value;
+    digitos = inputSenha.length;
+    
+    if (digitos < 8) {
+        alert("A senha deve conter no mínimo 8 digitos.")
+        return false;
+    
+    } else if (digitos > 10 ) {
+        alert("A senha não pode exceder 10 digitos.")
+        return false;
+    
+    } else if (document.getElementById("inputSenha").value != document.getElementById("inputConfirmSenha").value) {
+        alert("As senhas não coincidem.");
+        return false;
+
+    } else {
+        alert("Parabéns! Você já está cadastrado e pode receber nossos cupons a qualquer momento, fique ligado!");
+        return true
+    }
+}
+
+function only_letter(e) {
+    tecla = (window.event)?event.keyCode:e.which;
+
+    if ((tecla >= 65 && tecla <= 90) || (tecla >= 97 && tecla <= 122) || (tecla == 32) || (tecla == 8) || (tecla >= 37 &&  tecla <= 40) || (tecla == 116)) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function only_number(e) {
+    tecla = (window.event)?event.keyCode:e.which;
+
+    if ((tecla >= 48 && tecla <= 57) || (tecla >= 96 && tecla <= 105) || (tecla == 8) || (tecla >= 37 && tecla <= 39) || (tecla == 46) || (tecla == 116)) {
+        return false
+    } else {
+        return false
+    }
+}
+
+function senha() {
+    senha1 = document.getElementById("inputSenha").value;
+    senha2 = document.getElementById("inputConfirmSenha").value;
+
+    if (senha1 != senha2) {
+        document.getElementById("msg").style.display = "block";
+    } else {
+        document.getElementById("msg").style.display = "none";
+    }
+}
+//////////////////////////////////////////////////////////////////////

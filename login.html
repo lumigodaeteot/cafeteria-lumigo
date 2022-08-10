@@ -18,23 +18,38 @@
 </head>
 <body>
     <div class="login-body">
-        <img class="dec" src="img/login_back-1.png">
-        <img class="dec" src="img/login_back-2.png">
-        <img class="dec" src="img/login_back-3.png">
-        <img class="dec" src="img/login_back-4.png">
-
         <div class="login-container">
-            <div class="login-content">
-                <h1 class="tit">Login</h1>
-                <input type="text" name="inputNome">
+            
+                <form class="login-content" name="form" action="home.html" onsubmit="return validacao(this)">
+                    <h1 class="tit">Cadastre-se</h1>
 
-                <div class="div_senha">
-                    <input type="password" name="inputSenha" id="inputSenha">
-                    <img id="senhaonoff" src="img/dec-senhaoff.png" onclick="eyeClick()">
-                </div>
+                    <div class="row-100">
+                        <div class="div_nome">
+                            <input type="text" name="inputNome" id="inputNome" placeholder="Digite seu nome completo" required onkeydown="return only_letter(event)">
+                        </div>
+                    </div>
 
-                <input type="submit" value="Entrar" class="btn">
-            </div>
+                    <div class="row-100">
+                        <div class="div_email">
+                            <input type="email" name="inputEmail" id="inputEmail" placeholder="Digite seu email" required>
+                        </div>
+                    </div>
+
+                    <div class="row-50">
+                        <div class="div_senha">
+                            <input type="password" name="inputSenha" id="inputSenha" placeholder="Escolha sua senha" required oninput="senha()">
+                            <img id="senhaonoff" src="img/dec-senhaoff.png" onclick="eyeClick()">
+                        </div>
+
+                        <div class="div_confirm-senha">
+                            <input type="password" name="inputSenha" id="inputConfirmSenha" placeholder="Confirme sua senha" required oninput="senha()">
+                            <p id="msg" style="display: none; color: red; text-align: right; font-size: 0.7em; margin-top: 10px;">* AS SENHAS NÃO COINCIDEM *</p>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Cadastrar" class="btn">
+                    <a style="text-align: left; width: 30%; font-size: 13px; text-decoration: none;" href="home.html">Clique para voltar</a>
+                </form>
             <div class="login-content">
                 <img width="80%" src="img/dec-login.png">
             </div>
