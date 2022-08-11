@@ -232,6 +232,11 @@ section {
     background: var(--background-salmon);
     width: 100%;
     height: 100vh;
+    padding: 50px 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     position: relative;
     z-index: 1;
@@ -252,8 +257,7 @@ section {
     font-size: 4em;
     letter-spacing: 4px;
     color: #92644D;
-    margin-left: 200px;
-    padding-top: 50px;
+    margin-left: 10%;
 
     position: relative;
     z-index: 100;
@@ -263,8 +267,8 @@ section {
     font-family: 'Bebas Neue', cursive;
     font-size: 2.5em;
     color: #FFCBB0;
-    margin-left: 150px;
-    padding-top: 50px;
+    
+    margin-top: 50px;
     letter-spacing: 2px;
 
     position: relative;
@@ -283,7 +287,7 @@ section {
 }
 
 .tela-3 .button {
-    top: 85%;
+    bottom: 10%;
     right: 18%;
 
     display: inline-block;
@@ -464,7 +468,7 @@ footer .copyright {
 }
 /* ====================================================================================== */
 
-/* ==================================== SEGUNDA PÁGINA ===================================*/
+/* =================================== PÁGINA PRODUTOS ===================================*/
 
 main .dec-3 {
     position: absolute;
@@ -487,7 +491,6 @@ main .dec-3:hover {
 .produto {
     width: 100%;
     height: auto;
-    align-items: center;
 }
 
 .produto .menu {
@@ -633,38 +636,6 @@ button.active .menu::after {
     justify-content: center;
 
     position: relative;
-}
-
-.login-body .dec {
-    position: absolute;
-}
-
-.login-body .dec:nth-child(1) {
-    width: 25vw;
-
-    top: 0;
-    left: 0;
-}
-
-.login-body .dec:nth-child(2) {
-    width: 30vw;
-
-    top: 0;
-    right: 0;
-}
-
-.login-body .dec:nth-child(3) {
-    width: 30vw;
-
-    bottom: 0;
-    left: 0;
-}
-
-.login-body .dec:nth-child(4) {
-    width: 25vw;
-
-    bottom: 0;
-    right: 0;
 }
 
 .login-container {
@@ -868,39 +839,47 @@ button.active .menu::after {
         font-size: 2em;
     }
     /* =================================== */
-
+    
     /* ========== TERCEIRA TELA ========== */
     .tela-3 {
-        padding: 0 20px;
+        padding: 20px;
+        justify-content: flex-start;
     }
 
     .tela-3 .dec {
-        width: 80vw;
-        height: 40vh;
+        width: 95vw;
+        height: 50vh;
     }
 
     .tela-3 .titulo {
-        font-size: 3em;
-        margin: 0;
+        font-size: 2.7em;
+        margin-top: 60%;
+        margin-left: 0;
     }
 
     .tela-3 .composicao {
-        font-size: 2em;
-        margin-top: 40vh;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 2.5em;
+        color: #FFCBB0;
+        
+
+        bottom: 5%;
+        position: absolute;
+
+        z-index: 100;
     }
 
     .tela-3 .dec-ticket {
         width: 50vw;
         height: auto;
 
-        top: 25%;
+        top: 5%;
         right: 5%;
     }
 
     .tela-3 .button {
-        top: 50%;
-        right: 10%;
-        padding: 15px 25px;
+        bottom: 5%;
+        right: 20%;
         font-size: 16px;
     }
     
@@ -912,11 +891,11 @@ button.active .menu::after {
         transform: translate(4px, 4px);
     }
     /* =================================== */
-        
+
     /* =========== QUARTA TELA =========== */
     .tela-4 {
         padding: 20px;
-
+        justify-content: center;
         align-items: center;
     }
 
@@ -934,19 +913,22 @@ button.active .menu::after {
         width: 75vw;
         height: auto;
 
-        top: 55%;
-        left: 20px;
+        top: auto;
+        bottom: 3%;
+        left: 10%;
     }
 
     .tela-4 .titulo {
         font-size: 3em;
-        margin-top: 25%;
+
+        position: absolute;
+        top: 15%;
     }
 
     .tela-4 .composicao {
         font-size: 2em;
         color: #FFCBB0;  
-        margin: 30px 0;
+        margin: 0;
         
         letter-spacing: 2px;
     }
@@ -992,5 +974,82 @@ button.active .menu::after {
     footer .copyright {
         font-size: 1em;
     }
+
+    /* =================================== PÁGINA PRODUTOS ===================================*/
+
+    main .dec-3 {
+        display: none;
+    }
+
+    .produtos-content {
+        padding: 20px;
+    }
+
+    .produto button {
+        font-size: 36px;
+    }
+
+    .abas {
+        padding: 20px;
+    }
+
+    .grid-content {
+        grid-template-areas: "a" 
+                             "b"
+                             "c"
+                             "d"
+        ;
+        gap: 30px;
+    }
+
+    .produto .content {
+        height: 20vh;
+        gap: 15px;
+    }
+
+    .info h1 {
+        font-size: 1em;
+    }
+
+    .produto .content img {
+        border-radius: 8px;
+    }
+    /* ====================================================================================== */
+    
+    /* ==================================== PÁGINA DE LOGIN ==================================*/
+    .login-body {
+        background: var(--pink);
+        padding: 20px;
+    }
+
+    .login-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .login-content {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .login-content:nth-child(1) {
+        border-radius: 10px;
+        max-width: 100%;
+    }
+
+    .login-content .tit {
+        font-size: 2.5em;
+    }
+
+    .login-content:nth-child(2) {
+        display: none;
+    }
+
+    /* ====================================================================================== */
+
+    /* =========== SCROLL BAR ============ */
+    ::-webkit-scrollbar {width: 0;}
+    ::-webkit-scrollbar-thumb {width: 0;}
     /* =================================== */
 }
