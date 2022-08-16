@@ -131,7 +131,7 @@ function showHideDiv5() {
 function eyeClick() {
     let inputSenha = document.getElementById("inputSenha");
     let inputConfirmSenha = document.getElementById("inputConfirmSenha");
-    let eye = document.getElementById("senhaonoff");
+    let eye = document.querySelector(".senhaonoff");
     let senhaTypePassword = inputSenha.type == "password";
 
     if (senhaTypePassword) {
